@@ -6,7 +6,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      name: 'Shalu'
+      name: 'vicky'
     }
 
   }
@@ -19,7 +19,10 @@ class App extends Component {
           <p>
             Hi {this.state.name}
           </p>
-          <button>
+          <button onClick={() => {
+            this.setState({name: 'shalu'});
+          // eslint-disable-next-line react/jsx-no-comment-textnodes
+          }}> 
             Change name
           </button>
         </header>
