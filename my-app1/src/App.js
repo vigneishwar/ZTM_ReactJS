@@ -6,7 +6,8 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      name: 'vicky'
+      name: {firstname: 'vicky', lastname: 'charms'},
+      company: 'BRYK'
     }
 
   }
@@ -17,10 +18,11 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Hi {this.state.name}
+            Hi {this.state.name.firstname} {this.state.name.lastname}, I work at {this.state.company}
           </p>
           <button onClick={() => {
-            this.setState({name: 'shalu'});
+            this.setState({name: {firstname: 'shalu', lastname: 'vikki'}}); // passing objects to setState. Always make sure that the setState method has the same shape as state
+            console.log(this.state)
           // eslint-disable-next-line react/jsx-no-comment-textnodes
           }}> 
             Change name
